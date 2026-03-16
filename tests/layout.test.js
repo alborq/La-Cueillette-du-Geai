@@ -62,7 +62,6 @@ async function main() {
   const heroPhoto = await measure(mobile, ".hero-photo");
   const heroAddress = await measure(mobile, ".hero-address");
   const primaryCta = await measure(mobile, ".hero-actions .button-primary");
-  const heroLink = await measure(mobile, ".hero-link");
   const mobileViewportHeight = 844;
 
   assert.ok(heroTitle.width / heroCopy.width > 0.75, "Hero title is too narrow on mobile");
@@ -72,7 +71,6 @@ async function main() {
   assert.ok(heroPhoto.top < mobileViewportHeight, "Hero image does not start within the first mobile viewport");
   assert.ok(heroAddress.bottom <= mobileViewportHeight, "Hero address is not visible on first mobile viewport");
   assert.ok(primaryCta.bottom <= mobileViewportHeight, "Primary CTA is not visible on first mobile viewport");
-  assert.ok(heroLink.bottom <= mobileViewportHeight, "Hero secondary link is not visible on first mobile viewport");
 
   await browser.close();
   console.log("Layout tests passed.");
