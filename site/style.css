@@ -1,0 +1,541 @@
+:root {
+  --paper: #efe5cf;
+  --paper-light: #f7f0e1;
+  --ink: #223b2c;
+  --ink-soft: #516554;
+  --green: #6d8564;
+  --green-deep: #435740;
+  --line: rgba(34, 59, 44, 0.16);
+  --card: rgba(255, 251, 243, 0.7);
+  --shadow: 0 20px 50px rgba(48, 61, 41, 0.12);
+  --radius-lg: 32px;
+  --radius-md: 24px;
+  --radius-sm: 18px;
+  --container: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at top left, rgba(109, 133, 100, 0.26), transparent 32%),
+    radial-gradient(circle at right 12% top 18%, rgba(173, 162, 128, 0.16), transparent 18%),
+    linear-gradient(180deg, #efe3ca 0%, #f7f0e3 48%, #ede2cb 100%);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255, 250, 241, 0.28), rgba(255, 250, 241, 0.28)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 120px
+    );
+}
+
+.container {
+  width: min(var(--container), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero,
+.section,
+.site-footer {
+  position: relative;
+}
+
+.hero {
+  padding: 1.2rem 0 4rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.7rem 0 2rem;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.brand-kicker,
+.section-label,
+.contact-label,
+.visit-card-label {
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.topbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.topbar-links a,
+.button {
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.topbar-links a {
+  padding: 0.65rem 0.95rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+.topbar-links a:hover,
+.topbar-links a:focus-visible {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: 2.5rem;
+  min-height: calc(100vh - 8rem);
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.section-label,
+.contact-label,
+.visit-card-label {
+  color: var(--ink-soft);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.06;
+  font-weight: 600;
+}
+
+h1 {
+  max-width: 11ch;
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+}
+
+h2 {
+  max-width: 14ch;
+  font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.hero-text,
+.section-heading p,
+.values-copy p,
+.contact-copy p,
+.intro-grid p,
+.product-card p,
+.value-card p,
+.contact-card p,
+.visit-card p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--green-deep);
+  font-size: 0.98rem;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--green-deep);
+  color: var(--paper-light);
+  box-shadow: 0 18px 32px rgba(67, 87, 64, 0.18);
+}
+
+.button-secondary {
+  background: rgba(255, 251, 243, 0.42);
+}
+
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-highlights li,
+.value-card,
+.plant-list-card,
+.contact-card,
+.intro-grid article,
+.product-card,
+.visit-card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+.hero-highlights li {
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.frame {
+  position: relative;
+  padding: 0.9rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 243, 0.56);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(67, 87, 64, 0.13);
+  border-radius: calc(var(--radius-lg) - 0.5rem);
+  pointer-events: none;
+}
+
+.frame img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 0.65rem);
+  filter: saturate(0.93) contrast(1.02);
+}
+
+.frame-large {
+  transform: rotate(-1.4deg);
+}
+
+.frame-small {
+  margin-top: 1rem;
+}
+
+.visit-card {
+  position: absolute;
+  right: -1rem;
+  bottom: 1.4rem;
+  max-width: 18rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.visit-card-title,
+.contact-emphasis {
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.intro-band {
+  padding: 0 0 1rem;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.intro-grid article,
+.product-card,
+.value-card,
+.plant-list-card,
+.contact-card {
+  border-radius: var(--radius-md);
+}
+
+.intro-grid article {
+  padding: 1.35rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.product-card {
+  display: grid;
+  gap: 1.4rem;
+  padding: 1.25rem;
+}
+
+.product-card-copy {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.product-note {
+  font-style: italic;
+}
+
+.values-section {
+  overflow: hidden;
+}
+
+.values-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.values-copy {
+  display: grid;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.value-card {
+  padding: 1.35rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.plant-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.plant-card,
+.plant-list-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.plant-card h3,
+.plant-list-card h3 {
+  padding: 0 0.2rem;
+}
+
+.plant-list-card {
+  padding: 1.25rem;
+}
+
+.plant-list-card ul {
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.plant-list-card li + li {
+  margin-top: 0.45rem;
+}
+
+.contact-section {
+  padding-bottom: 5rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.85fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.contact-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.contact-block {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-card a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.legal-block {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer {
+  padding: 1.4rem 0 2.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-layout,
+  .values-layout,
+  .contact-layout,
+  .product-grid,
+  .plant-gallery,
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-copy {
+    padding-right: 0;
+  }
+
+  .plant-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .visit-card {
+    position: static;
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 0.8rem;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 15vw, 4.2rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-highlights,
+  .values-grid,
+  .plant-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .button,
+  .topbar-links a {
+    width: 100%;
+  }
+
+  .topbar-links,
+  .hero-actions {
+    width: 100%;
+  }
+
+  .container {
+    width: min(var(--container), calc(100% - 1.2rem));
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .topbar-links a {
+    transition: none;
+  }
+}
