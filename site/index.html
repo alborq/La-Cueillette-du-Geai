@@ -59,9 +59,10 @@
             </span>
           </a>
           <div class="topbar-links">
-            <a href="#produits">Produits</a>
             <a href="#univers">À propos</a>
+            <a href="#produits">Produits</a>
             <a href="#methode">Méthode</a>
+            <a href="#plantes">Plantes</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -71,8 +72,8 @@
             <p class="section-label">Herboristerie paysanne à Biziat, dans l'Ain</p>
             <h1>Tisanes artisanales, sirops de plantes et cueillettes locales.</h1>
             <p class="hero-text">
-              Un atelier végétal artisanal entre cueillette sauvage,
-              culture vivante et goût des saisons.
+              Tisanes et sirops de plantes élaborés en petites séries
+              à partir de cueillettes locales et de cultures menées à Biziat.
             </p>
             <p class="hero-address">📍 Biziat (Ain) · Point de vente : 1015 rte du moulin du geai</p>
             <div class="hero-actions">
@@ -103,7 +104,6 @@
             </article>
           </div>
 
-            <p class="hero-address">📍 Biziat (Ain) · Point de vente : 1015 rte du moulin du geai</p>
           </div>
 
           <div class="hero-bottom-row">
@@ -114,7 +114,7 @@
                 <li>200 mL : 8€</li>
                 <li>500 mL : 18€</li>
               </ul>
-              <a class="button button-primary proof-button" href="#produits">Voir les produits</a>
+              <a class="button button-secondary proof-button" href="#produits">Voir les produits</a>
             </article>
           </div>
         </div>
@@ -133,9 +133,9 @@
             <h2>Une herboristerie paysanne entre nature, terroir et savoir-faire.</h2>
             <p>
               La Cueillette du Geai est une activité agricole artisanale dédiée à la cueillette
-              et à la transformation de plantes. Inspirée des anciennes herboristeries,
-              du geste paysan et d'une production locale à petite échelle, la marque défend
-              une vision simple : faire parler la plante avec justesse, sans artifice ni superflu.
+              et à la transformation de plantes. Inspirée des anciennes herboristeries et d'une
+              production locale à petite échelle, la marque défend une vision simple :
+              faire parler la plante avec justesse, sans artifice ni superflu.
             </p>
             <div class="story-points">
               <article>
@@ -256,7 +256,7 @@
         <div class="container promise-panel">
           <div class="promise-copy">
             <p class="section-label section-label-light">Acheter les produits</p>
-            <h2>Une production locale à Biziat, dans l'Ain.</h2>
+            <h2>Acheter sur place à Biziat.</h2>
             <p>
               Le site présente l'univers de la marque et oriente vers le contact direct ainsi que
               vers l'achat sur place, à l'adresse de production. Il ne s'agit pas d'une boutique en ligne.
@@ -289,39 +289,53 @@
             <p class="section-label">Plantes</p>
             <h2>Quelques plantes travaillées au fil des cueillettes et des cultures.</h2>
             <p>
-              La Cueillette du Geai valorise une palette de plantes simples, familières et profondément vivantes.
+              Une sélection de plantes en accord avec les parfums déjà présentés sur le site.
             </p>
           </div>
 
           <div class="plant-gallery">
-            <article class="plant-card">
-              <figure class="frame"><img src="images/plant-camomille.png" alt="Carte botanique de camomille"></figure>
-              <h3>Camomille</h3>
-            </article>
-            <article class="plant-card">
-              <figure class="frame"><img src="images/plant-reine-des-pres.png" alt="Carte botanique de reine des prés"></figure>
-              <h3>Reine des prés</h3>
-            </article>
-            <article class="plant-card">
-              <figure class="frame"><img src="images/plant-sureau.png" alt="Carte botanique de sureau"></figure>
-              <h3>Sureau</h3>
-            </article>
-            <article class="plant-card">
-              <figure class="frame"><img src="images/plant-menthe.png" alt="Carte botanique de menthe"></figure>
-              <h3>Menthes</h3>
-            </article>
-            <article class="plant-list-card">
-              <p class="section-label">Autres plantes travaillées</p>
-              <ul>
-                <li>Thym citron</li>
-                <li>Aubépine</li>
-                <li>Ortie</li>
-                <li>Guimauve</li>
-              </ul>
-              <figure class="frame frame-small">
-                <img src="images/plant-thym-citron.png" alt="Carte botanique de thym citron">
+            <button class="plant-card" type="button" data-plant-card data-title="Camomille" data-image="images/plant-camomille.png" data-alt="Carte botanique de camomille">
+              <figure class="frame">
+                <img src="images/plant-camomille.png" alt="Carte botanique de camomille">
+                <figcaption><h3>Camomille</h3></figcaption>
               </figure>
-            </article>
+            </button>
+            <button class="plant-card" type="button" data-plant-card data-title="Menthe aquatique" data-image="images/plant-menthe-aquatique.png" data-alt="Carte botanique de menthe aquatique">
+              <figure class="frame">
+                <img src="images/plant-menthe-aquatique.png" alt="Carte botanique de menthe aquatique">
+                <figcaption><h3>Menthe aquatique</h3></figcaption>
+              </figure>
+            </button>
+            <button class="plant-card" type="button" data-plant-card data-title="Menthe poivrée" data-image="images/plant-menthe-poivree.png" data-alt="Carte botanique de menthe poivrée">
+              <figure class="frame">
+                <img src="images/plant-menthe-poivree.png" alt="Carte botanique de menthe poivrée">
+                <figcaption><h3>Menthe poivrée</h3></figcaption>
+              </figure>
+            </button>
+            <button class="plant-card" type="button" data-plant-card data-title="Reine des prés" data-image="images/plant-reine-des-pres.png" data-alt="Carte botanique de reine des prés">
+              <figure class="frame">
+                <img src="images/plant-reine-des-pres.png" alt="Carte botanique de reine des prés">
+                <figcaption><h3>Reine des prés</h3></figcaption>
+              </figure>
+            </button>
+            <button class="plant-card" type="button" data-plant-card data-title="Sureau" data-image="images/plant-sureau.png" data-alt="Carte botanique de sureau">
+              <figure class="frame">
+                <img src="images/plant-sureau.png" alt="Carte botanique de sureau">
+                <figcaption><h3>Sureau</h3></figcaption>
+              </figure>
+            </button>
+            <button class="plant-card" type="button" data-plant-card data-title="Thym citron" data-image="images/plant-thym-citron.png" data-alt="Carte botanique de thym citron">
+              <figure class="frame">
+                <img src="images/plant-thym-citron.png" alt="Carte botanique de thym citron">
+                <figcaption><h3>Thym citron</h3></figcaption>
+              </figure>
+            </button>
+            <button class="plant-card" type="button" data-plant-card data-title="Verveine citron" data-image="images/plant-verveine-citron.png" data-alt="Carte botanique de verveine citron">
+              <figure class="frame">
+                <img src="images/plant-verveine-citron.png" alt="Carte botanique de verveine citron">
+                <figcaption><h3>Verveine citron</h3></figcaption>
+              </figure>
+            </button>
           </div>
         </div>
       </section>
@@ -374,5 +388,39 @@
       </div>
     </footer>
   </div>
+
+  <dialog class="plant-modal" id="plant-modal">
+    <button class="plant-modal-close" type="button" aria-label="Fermer l'aperçu">×</button>
+    <div class="plant-modal-body">
+      <img id="plant-modal-image" src="" alt="">
+      <h3 id="plant-modal-title"></h3>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const modal = document.getElementById("plant-modal");
+      const modalImage = document.getElementById("plant-modal-image");
+      const modalTitle = document.getElementById("plant-modal-title");
+      const closeButton = modal.querySelector(".plant-modal-close");
+      const cards = document.querySelectorAll("[data-plant-card]");
+
+      for (const card of cards) {
+        card.addEventListener("click", () => {
+          modalImage.src = card.dataset.image;
+          modalImage.alt = card.dataset.alt;
+          modalTitle.textContent = card.dataset.title;
+          modal.showModal();
+        });
+      }
+
+      closeButton.addEventListener("click", () => modal.close());
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.close();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
