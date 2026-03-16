@@ -1,0 +1,14 @@
+{
+  "name": "la-cueillette-du-geai",
+  "private": true,
+  "description": "Outils locaux de capture pour le site statique La Cueillette du Geai.",
+  "scripts": {
+    "test": "node tests/layout.test.js",
+    "screenshot:mobile": "node scripts/screenshot.js mobile screenshots/mobile.png",
+    "screenshot:desktop": "node scripts/screenshot.js desktop screenshots/desktop.png",
+    "screenshots": "npm run screenshot:mobile && npm run screenshot:desktop"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}
